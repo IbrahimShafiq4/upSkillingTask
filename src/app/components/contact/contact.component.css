@@ -1,0 +1,12 @@
+button[type='submit'] {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+button.disabled {
+    cursor: not-allowed;
+}
+
+i {
+    color: #5180F6;
+}

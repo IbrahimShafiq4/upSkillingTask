@@ -1,0 +1,35 @@
+<div class="py-5">
+    <h3 class="main-header">
+        <span></span>
+        <span></span>
+        Services
+        <span></span>
+        <span></span>
+    </h3>
+    
+    <article class="d-flex justify-content-center align-items-center my-2">
+        <div class="row">
+            @for (list of serviceContent; track list; let i = $index) {
+                <div class="col-lg-4 col-md-6 col-12 p-4">
+                    <div class="contentBx shadow rounded-4 overflow-hidden">
+                        <figure>
+                            <img [src]="list.img" [alt]="list.title" class="w-100 h-100">
+                        </figure>
+                        <div class="content-body px-3">
+                            <div class="content-title">
+                                <h5>{{ list.title }}</h5>
+                            </div>
+                            <div class="content-text">
+                                <p>
+                                    {{ list.description }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        
+    </article>
+    <button type="button" class="btn btn-primary py-2 px-4 rounded-5 mx-auto d-block" (click)="helpMe()">Help Me</button>
+</div>

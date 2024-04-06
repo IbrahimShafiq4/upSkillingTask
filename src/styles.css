@@ -1,0 +1,174 @@
+@import "ngx-toastr/toastr";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+/* GLOBAL STYLES */
+.main-header {
+    padding: 20px;
+    font-size: 64px;
+    color: #6d91ee;
+    font-weight: bolder;
+    text-align: center;
+    position: relative;
+    transition: 0.2s linear;
+    z-index: 99;
+}
+
+.main-header span {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #6d91ee;
+    transition: 0.2s linear;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.main-header span:nth-child(1) {
+    transform: rotate(-45deg) translate(-48px, -45px);
+}
+
+.main-header span:nth-child(2) {
+    bottom: 0;
+    transform: rotate(45deg) translate(-60px, 27px);
+}
+
+.main-header span:nth-child(3) {
+    transform: rotate(225deg) translate(-10px, 10px);
+}
+
+.main-header span:nth-child(4) {
+    bottom: 0;
+    transform: rotate(-225deg) translate(-29px, 3px);
+}
+
+.main-header:hover span:nth-child(1) {
+    transform: rotate(0deg) translate(0, 0);
+    height: 75%;
+    width: 25%;
+}
+
+.main-header:hover span:nth-child(2) {
+    transform: rotate(0deg) translate(0, -25%);
+    height: 75%;
+    width: 25%;
+}
+
+.main-header:hover span:nth-child(3) {
+    transform: rotate(0deg) translate(-100%, 0);
+    height: 75%;
+    width: 25%;
+}
+
+.main-header:hover span:nth-child(4) {
+    transform: rotate(0deg) translate(-100%, -25%);
+    height: 75%;
+    width: 25%;
+}
+
+@media (max-width: 992px) {
+
+    .main-header {
+        font-size: 48px;
+    }
+
+    .main-header span {
+        width: 20px;
+        height: 2px;
+    }
+    
+    .main-header span:nth-child(1) {
+        transform: rotate(-45deg) translate(-48px, -45px);
+    }
+    
+    .main-header span:nth-child(2) {
+        transform: rotate(45deg) translate(-65px, 27px);
+    }
+    
+    .main-header span:nth-child(3) {
+        transform: rotate(225deg) translate(-10px, 10px);
+    }
+    
+    .main-header span:nth-child(4) {
+        transform: rotate(-225deg) translate(-29px, 9px);
+    }
+    
+    .main-header:hover span:nth-child(1) {
+        height: 50%;
+        width: 35%;
+    }
+    
+    .main-header:hover span:nth-child(2) {
+        transform: rotate(0deg) translate(0, -50%);
+        height: 50%;
+        width: 35%;
+    }
+    
+    .main-header:hover span:nth-child(3) {
+        height: 50%;
+        width: 35%;
+    }
+    
+    .main-header:hover span:nth-child(4) {
+        transform: rotate(0deg) translate(-100%, -50%);
+        height: 50%;
+        width: 35%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .main-header {
+        font-size: 32px;
+    }
+
+    .main-header span {
+        width: 20px;
+        height: 2px;
+    }
+    
+    .main-header span:nth-child(1) {
+        transform: rotate(-45deg) translate(-48px, -45px);
+    }
+    
+    .main-header span:nth-child(2) {
+        transform: rotate(45deg) translate(-65px, 27px);
+    }
+    
+    .main-header span:nth-child(3) {
+        transform: rotate(225deg) translate(-10px, 10px);
+    }
+    
+    .main-header span:nth-child(4) {
+        transform: rotate(-225deg) translate(-29px, 9px);
+    }
+    
+    .main-header:hover span:nth-child(1) {
+        height: 50%;
+        width: 35%;
+    }
+    
+    .main-header:hover span:nth-child(2) {
+        transform: rotate(0deg) translate(0, -50%);
+        height: 50%;
+        width: 35%;
+    }
+    
+    .main-header:hover span:nth-child(3) {
+        height: 50%;
+        width: 35%;
+    }
+    
+    .main-header:hover span:nth-child(4) {
+        transform: rotate(0deg) translate(-100%, -50%);
+        height: 50%;
+        width: 35%;
+    }
+}
+
+.main-header:hover {
+    color: #fff;
+}

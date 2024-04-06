@@ -1,0 +1,16 @@
+a {
+    cursor: pointer;
+}
+
+nav {
+    background-color: #0C1E49;
+}
+
+li {
+    padding: 5px 10px;
+}
+
+.ActiveLink {
+    background-color: #6D91EE;
+    color: #000;
+}

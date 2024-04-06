@@ -1,0 +1,51 @@
+section {
+    background-image: url('../../../assets/about/about 1.jpeg');
+    background-position: left center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.shadowDiv {
+    background: rgba(109, 146, 238, 0.4);
+}
+
+.whereArticle {
+    clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%);
+
+    background-color: #6D91EE;
+}
+
+article {
+    p {
+        text-wrap: wrap;
+        padding-left: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        line-height: 0.9rem;
+    }
+}
+
+@media (max-width: 992px) {
+    article {
+        p {
+            font-size: 12px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    article {
+        p {
+            font-size: 10px;
+        }
+    }
+}
+
+@media (max-width: 690px) {
+    article {
+        p {
+            font-size: 8px;
+        }
+    }
+}

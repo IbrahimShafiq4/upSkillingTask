@@ -1,0 +1,99 @@
+<div class="row d-lg-flex align-items-lg-center g-lg-5">
+    <div class="col-md-6 col-12">
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="d-flex flex-column gap-1">
+            <div class="form-group">
+                <label for="name"></label>
+                <input  
+                        class="form-control px-3 py-2"
+                        type="text" 
+                        id="name" 
+                        formControlName="name" 
+                        placeholder="your name..."
+                        [ngClass]="
+                            {
+                                'is-valid': userForm.get('name')?.valid && userForm.get('name')?.touched, 
+                                'is-invalid': userForm.get('name')?.invalid && userForm.get('name')?.touched
+                            }"
+                    />
+
+                    @if (userForm.get('name')?.touched && userForm.get('name')?.getError('required')) {
+                        <p class="alert alert-danger py-2 mt-2 mb-0">Name Is Required</p>
+                    } @else if (userForm.get('name')?.touched && userForm.get('name')?.getError('minlength')) {
+                        <p class="alert alert-danger py-2 mt-2 mb-0">Name minLength Is 3</p>
+                    } @else if (userForm.get('name')?.touched && userForm.get('name')?.getError('maxlength')) {
+                        <p class="alert alert-danger py-2 mt-2 mb-0">Name maxLength Is 10</p>
+                    }
+            </div>
+        
+            <div class="form-group">
+                <label for="email"></label>
+                <input  
+                        class="form-control px-3 py-2"
+                        type="text" 
+                        id="email" 
+                        formControlName="email" 
+                        placeholder="your email..."
+                        [ngClass]="
+                            {
+                                'is-valid': userForm.get('email')?.valid && userForm.get('email')?.touched, 
+                                'is-invalid': userForm.get('email')?.invalid && userForm.get('email')?.touched
+                            }"
+                    />
+                    @if (userForm.get('email')?.touched && userForm.get('email')?.getError('required')) {
+                        <p class="alert alert-danger py-2 mt-2 mb-0">E-mail Is Required</p>
+                    } @else if (userForm.get('email')?.touched && userForm.get('email')?.getError('email')) {
+                        <p class="alert alert-danger py-2 mt-2 mb-0">
+                            Please enter a valid email address in the format <span class="fw-bolder">example&#64;example.com</span> .
+                        </p>
+                    }
+            </div>
+
+
+        
+            <div class="form-group">
+                <label for="phone"></label>
+                <input  
+                        class="form-control px-3 py-2"
+                        type="text" 
+                        id="phone" 
+                        formControlName="phone" 
+                        placeholder="your phone..."
+                        [ngClass]="
+                            {
+                                'is-valid': userForm.get('phone')?.valid && userForm.get('phone')?.touched, 
+                                'is-invalid': userForm.get('phone')?.invalid && userForm.get('phone')?.touched
+                            }"
+                    />
+
+                @if (userForm.get('phone')?.touched && userForm.get('phone')?.getError('required')) {
+                    <p class="alert alert-danger py-2 mt-2 mb-0">Phone Number Is Required</p>
+                } @else if (userForm.get('phone')?.touched && userForm.get('phone')?.getError('pattern')) {
+                    <p class="alert alert-danger py-2 mt-2 mb-0">
+                        Please enter a valid Egyptian phone number starting with +201, 01, or 00201, followed by 10 digits.
+                    </p>
+                } @else if (userForm.get('phone')?.touched && userForm.get('phone')?.getError('maxLength')) {
+                    <p class="alert alert-danger py-2 mt-2 mb-0">
+                        phone Number maxLength is 11
+                    </p>
+                }
+            </div>
+        
+            <button 
+                type="submit" 
+                class="btn btn-outline-primary mt-4" 
+                [disabled]="userForm.invalid"
+                [ngClass]="{'disabled': userForm.invalid}"
+            >Send</button>
+        </form>
+    </div>
+    <div class="col-md-6 col-12 d-flex justify-content-center flex-column gap-4 mt-3 mt-lg-0 mt-md-0">
+        <div class="d-flex gap-4 align-items-center fs-5">
+            <i class="fa-solid fa-envelope"></i>
+            <p class="mb-0">upskilling.eg1&#64;gmail.com</p>
+        </div>
+        <div class="d-flex gap-4 align-items-center fs-5">
+            <i class="fa-solid fa-phone"></i>
+            <p class="mb-0">+20 115 493 2137</p>
+        </div>
+    </div>
+</div>

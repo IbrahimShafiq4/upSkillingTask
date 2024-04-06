@@ -1,0 +1,32 @@
+<h3 class="main-header">
+    <span></span>
+    <span></span>
+    Testimonial
+    <span></span>
+    <span></span>
+</h3>
+
+<div class="row mt-5 g-4">
+    @for (content of contentText; track $index) {
+        <div class="col-md-6 col-12 p-4">
+            <div class="testimonial-content d-flex align-items-start gap-3 shadow py-4 px-5 rounded-4">
+                <div class="imgBx">
+                    <figure>
+                        <img [src]="content.image" class="w-100 rounded-circle" [alt]="content.userName">
+                    </figure>
+                </div>
+                <div class="contentBx">
+                    <h5 class="user-name"> {{ content.userName }} </h5>
+                    <p class="content-text">
+                        {{ content.userText }}
+                    </p>
+                    <div class="d-flex gap-2">
+                        @for (star of starsArray; track $index) {
+                            <i class="fa-solid fa-star"></i>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

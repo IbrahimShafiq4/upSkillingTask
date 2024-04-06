@@ -1,0 +1,26 @@
+.contentBx {
+    transition: 0.2s linear;
+}
+
+.contentBx:hover {
+    transform: translateY(-10px)
+}
+
+.content-title {
+    h5 {
+        color: #324473;
+        font-weight: bolder;
+        
+    }
+}
+
+.content-text {
+    p {
+        color: #324473;
+        font-size: 14px;
+    }
+}
+
+a {
+    cursor: pointer;
+}

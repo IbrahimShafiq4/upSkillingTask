@@ -1,0 +1,18 @@
+.testimonial-content {
+    border: 1px solid #6D91EE;
+}
+
+.user-name {
+    color: #6D91EE;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.content-text {
+    color: #22366A;
+    line-height: 1.4rem;
+}
+
+i {
+    color: #6D91EE;
+}
